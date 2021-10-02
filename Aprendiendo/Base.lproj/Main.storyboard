@@ -42,6 +42,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="gqA-0z-tx1" kind="presentation" modalPresentationStyle="fullScreen" id="y2p-YS-KYP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inx-cs-agb">
                                 <rect key="frame" x="75" y="716" width="265" height="31"/>
@@ -74,6 +77,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="69.642857142857139"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="v6g-Hf-1nr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="gqA-0z-tx1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d23-Ic-kFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2089" y="117"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KZ7-Fp-Sf9">
