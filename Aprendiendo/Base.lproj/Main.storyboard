@@ -43,7 +43,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="gqA-0z-tx1" kind="presentation" modalPresentationStyle="fullScreen" id="y2p-YS-KYP"/>
+                                    <action selector="loginButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdr-bX-Eno"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inx-cs-agb">
@@ -73,6 +73,11 @@
                         <color key="backgroundColor" red="0.20951980695723355" green="0.34773593146707338" blue="0.64308026765555559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="A5A-7R-feW"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="CzZ-Oz-hjv" id="SjK-Cm-EOR"/>
+                        <outlet property="passwordTextField" destination="nJj-MU-evE" id="8Fr-3T-9zI"/>
+                        <segue destination="gqA-0z-tx1" kind="presentation" identifier="home_segue" modalPresentationStyle="overFullScreen" id="cpa-Ul-UM1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThS-6g-h6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="812"/>
+            <point key="canvasLocation" x="458" y="771"/>
         </scene>
         <!--Ayuda-->
         <scene sceneID="sJC-vu-bFC">
