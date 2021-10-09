@@ -28,7 +28,7 @@ class TweetTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    private func setupCell(username: String, message: String){
+    func setupCell(username: String, message: String){
         usernameLabel.text = username
         messageLabel.text = message
     }
