@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         
         //No olvidar!!
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "TweetTableViewCell", bundle: nil), forCellReuseIdentifier: "TweetTableViewCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "mi-celda")
         
         //Para implementar se utiliza delegate
@@ -37,7 +38,6 @@ extension ViewController: UITableViewDelegate{
 
 extension ViewController: UITableViewDataSource{
     //1.numero de filas que tendra la tabla
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }

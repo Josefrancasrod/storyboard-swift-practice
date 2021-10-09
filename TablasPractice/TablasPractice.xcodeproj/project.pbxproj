@@ -13,6 +13,8 @@
 		BC3944A0270FF777008F573F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC39449E270FF777008F573F /* Main.storyboard */; };
 		BC3944A2270FF779008F573F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3944A1270FF779008F573F /* Assets.xcassets */; };
 		BC3944A5270FF779008F573F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3944A3270FF779008F573F /* LaunchScreen.storyboard */; };
+		BCF5762A27115624001A4FDA /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5762827115624001A4FDA /* TweetTableViewCell.swift */; };
+		BCF5762B27115624001A4FDA /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF5762927115624001A4FDA /* TweetTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BC3944A1270FF779008F573F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC3944A4270FF779008F573F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC3944A6270FF779008F573F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF5762827115624001A4FDA /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		BCF5762927115624001A4FDA /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		BC394497270FF777008F573F /* TablasPractice */ = {
 			isa = PBXGroup;
 			children = (
+				BCF57627271155E6001A4FDA /* Cells */,
 				BC394498270FF777008F573F /* AppDelegate.swift */,
 				BC39449A270FF777008F573F /* SceneDelegate.swift */,
 				BC39449C270FF777008F573F /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				BC3944A6270FF779008F573F /* Info.plist */,
 			);
 			path = TablasPractice;
+			sourceTree = "<group>";
+		};
+		BCF57627271155E6001A4FDA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BCF5762827115624001A4FDA /* TweetTableViewCell.swift */,
+				BCF5762927115624001A4FDA /* TweetTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +142,7 @@
 				BC3944A5270FF779008F573F /* LaunchScreen.storyboard in Resources */,
 				BC3944A2270FF779008F573F /* Assets.xcassets in Resources */,
 				BC3944A0270FF777008F573F /* Main.storyboard in Resources */,
+				BCF5762B27115624001A4FDA /* TweetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 				BC39449D270FF777008F573F /* ViewController.swift in Sources */,
 				BC394499270FF777008F573F /* AppDelegate.swift in Sources */,
 				BC39449B270FF777008F573F /* SceneDelegate.swift in Sources */,
+				BCF5762A27115624001A4FDA /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
