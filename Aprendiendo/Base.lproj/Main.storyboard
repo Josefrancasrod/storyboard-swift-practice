@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NEc-Tz-wej">
-                                <rect key="frame" x="50" y="298" width="328" height="139"/>
+                                <rect key="frame" x="50" y="298" width="328" height="177"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzZ-Oz-hjv">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="34"/>
@@ -35,8 +35,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9t-e1-CiM">
+                                        <rect key="frame" x="0.0" y="82" width="328" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordar correo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbL-0V-czr">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U30-Zp-gD8">
+                                                <rect key="frame" x="279" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoi-3C-b5x">
-                                        <rect key="frame" x="0.0" y="82" width="328" height="57"/>
+                                        <rect key="frame" x="0.0" y="120" width="328" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="EwH-PC-WPY"/>
                                         </constraints>
@@ -53,7 +67,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eoi-3C-b5x" firstAttribute="top" secondItem="nJj-MU-evE" secondAttribute="bottom" constant="7" id="gQ0-n3-UZw"/>
+                                    <constraint firstItem="eoi-3C-b5x" firstAttribute="top" secondItem="f9t-e1-CiM" secondAttribute="bottom" constant="7" id="WLx-RC-n5x"/>
+                                    <constraint firstItem="f9t-e1-CiM" firstAttribute="top" secondItem="nJj-MU-evE" secondAttribute="bottom" constant="7" id="iSK-Cg-NZg"/>
+                                    <constraint firstItem="eoi-3C-b5x" firstAttribute="top" secondItem="f9t-e1-CiM" secondAttribute="bottom" constant="7" id="oXg-LV-bBd"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-ct-91F">
@@ -99,6 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="A5A-7R-feW"/>
                     <connections>
+                        <outlet property="emailSwitch" destination="U30-Zp-gD8" id="aCE-Cn-LIg"/>
                         <outlet property="emailTextField" destination="CzZ-Oz-hjv" id="SjK-Cm-EOR"/>
                         <outlet property="passwordTextField" destination="nJj-MU-evE" id="8Fr-3T-9zI"/>
                         <segue destination="gqA-0z-tx1" kind="presentation" identifier="home_segue" modalPresentationStyle="overFullScreen" id="cpa-Ul-UM1"/>
