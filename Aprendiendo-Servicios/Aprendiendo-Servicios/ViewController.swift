@@ -7,6 +7,14 @@
 
 import UIKit
 
+
+
+struct Human: Decodable {
+    let user: String
+    let age: Int
+    let isHappy: Bool
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -38,15 +46,19 @@ class ViewController: UIViewController {
             }
             
             guard let dataFromService = data,
-                  let dictionary = try? JSONSerialization.jsonObject(with: dataFromService, options: []) as? [String: Any] else {
+                  let model: Human = try? JSONDecoder().decode(Human.self, from: dataFromService) else {
+                  //let dictionary = try? JSONSerialization.jsonObject(with: dataFromService, options: []) as? [String: Any] else {
                 return
             }
             
             //Importante: Llamados a la UI se hacen en el main thread
             DispatchQueue.main.async {
-                let isHappy = dictionary["isHappy"] as? Bool ?? false
-                self.nameLabel.text = dictionary["user"] as? String
-                self.status.text = isHappy ? "El Usuario es Feliz" : "El usuario no es feliz"
+                //let isHappy = dictionary["isHappydataFromService"] as? Bool ?? false
+               // self.nameLabel.text = dictionary["user"] as? String
+               // self.status.text = isHappy ? "El Usuario es Feliz" : "El usuario no es feliz"
+                
+                self.nameLabel.text = model.user
+                self.status.text = model.isHappy ? "El Usuario es Feliz" : "El usuario no es feliz"
             }
             
             
