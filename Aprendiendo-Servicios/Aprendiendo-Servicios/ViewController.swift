@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 
@@ -35,6 +36,34 @@ class ViewController: UIViewController {
         }
         activityIndicator.startAnimating()
         
+        AF.request(endpoint, method: .get, parameters: nil).responseData {(response: AFDataResponse<Data>) in
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
+            if response.error != nil {
+                print("Hubo un error")
+                
+                return
+            }
+            
+            guard let dataFromService = response.data,
+                  let model: Human = try? JSONDecoder().decode(Human.self, from: dataFromService) else {
+                  //let dictionary = try? JSONSerialization.jsonObject(with: dataFromService, options: []) as? [String: Any] else {
+                return
+            }
+            
+            //Importante: Llamados a la UI se hacen en el main thread
+            DispatchQueue.main.async {
+                //let isHappy = dictionary["isHappydataFromService"] as? Bool ?? false
+               // self.nameLabel.text = dictionary["user"] as? String
+               // self.status.text = isHappy ? "El Usuario es Feliz" : "El usuario no es feliz"
+                
+                self.nameLabel.text = model.user
+                self.status.text = model.isHappy ? "El Usuario es Feliz" : "El usuario no es feliz"
+            }
+            
+        }
+        /*
         URLSession.shared.dataTask(with: endpoint) { (data: Data?, _, error: Error?) in
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
@@ -62,7 +91,7 @@ class ViewController: UIViewController {
             }
             
             
-        }.resume()
+        }.resume()*/
     }
 
 }
